@@ -50,6 +50,10 @@ a {
   position: relative;
 }
 
+.introduction.overflow-hidden {
+  height: 100%;
+}
+
 .body {
   background-color: var(--btn-text-color);
   color: #fff;
@@ -64,7 +68,7 @@ a {
 
 .content {
   height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 80px;
 }
 
@@ -90,7 +94,7 @@ a {
 
 .section-content {
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -108,12 +112,16 @@ a {
 .right-pane {
   background-color: var(--primary);
   width: 35%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0%;
   bottom: auto;
   left: auto;
   right: 0%;
+}
+
+.about-me.overflow-hidden {
+  padding-top: 40px;
 }
 
 .content-heading {
@@ -130,8 +138,7 @@ a {
 }
 
 .paragraph {
-  color: var(--primary);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .content-heading-wrapper {
@@ -149,7 +156,7 @@ a {
   height: 2px;
 }
 
-.hire-btn {
+.hire-me-btn {
   background-color: var(--primary);
   color: var(--btn-text-color);
   text-transform: capitalize;
@@ -158,11 +165,20 @@ a {
   font-weight: 600;
 }
 
-.download-btn {
+.download-cv-btn {
   border: 2px solid var(--primary);
+  text-align: center;
   text-transform: capitalize;
   background-color: rgba(0, 0, 0, 0);
+  width: 190px;
   padding: 7px 30px;
+  transition: all .2s;
+}
+
+.download-cv-btn:hover {
+  background-color: var(--primary);
+  color: var(--bg-color);
+  font-weight: 600;
 }
 
 .btns-wrapper {
@@ -380,12 +396,18 @@ a {
   flex: none;
   width: 130px;
   height: 130px;
+  overflow: hidden;
 }
 
-.image-2 {
-  object-fit: contain;
+.rounded-image {
+  object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: all .2s;
+}
+
+.rounded-image:hover {
+  opacity: .7;
 }
 
 .heading-4 {
@@ -483,16 +505,23 @@ a {
   cursor: pointer;
   width: 275px;
   margin-top: 40px;
+  margin-bottom: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-decoration: none;
   display: block;
   position: relative;
 }
 
-.text-block {
+.heade-badge-text {
   padding-left: 20px;
   font-size: 16px;
   font-weight: 600;
+  text-decoration: none;
+}
+
+.heade-badge-text.no-underline {
+  text-decoration: none;
 }
 
 .arrow-icon-wrapper {
@@ -777,6 +806,10 @@ a {
     max-width: 1250px;
   }
 
+  .content {
+    padding-bottom: 220px;
+  }
+
   .hey-text {
     font-size: 18px;
   }
@@ -821,12 +854,31 @@ a {
 }
 
 @media screen and (min-width: 1440px) {
+  .introduction.overflow-hidden {
+    padding-bottom: 40px;
+  }
+
   .container {
     max-width: 1380px;
   }
 
+  .section-content.intro {
+    margin-top: 200px;
+  }
+
   .aqibs-image {
     width: 28%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .download-cv-btn {
+    transition: all .2s;
+  }
+
+  .download-cv-btn:hover {
+    background-color: var(--primary);
+    color: var(--bg-color);
   }
 }
 
